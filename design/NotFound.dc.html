@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Page not found · SATO48</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#0A0E1A}
+a{color:inherit}
+a:hover{color:#FF6C00}
+.btn-primary{transition:transform .15s, box-shadow .15s}
+.btn-primary:hover{color:#0A0E1A!important;transform:translate(-2px,-2px)}
+.btn-ghost:hover{background:#FFFFFF!important;color:#0A0E1A!important}
+nav a:not([class*="btn-"]):hover,footer a:not([class*="btn-"]):hover{color:#FF6C00!important}
+a[style*="#FF6C00"]:not([class*="btn-"]):hover{color:#FFFFFF!important}
+a[style*="#E6E6EE"]:hover{color:#FF6C00!important}
+.grain{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain .5s steps(4) infinite}
+.scratch{animation:scratch 7s linear infinite}
+.scratch-2{animation-duration:11s;animation-delay:-4s}
+.flicker{animation:flicker 6s infinite}
+.clap-stick{transform-origin:6px 100%;animation:clap 4s ease-in-out infinite}
+.strip-track{animation:roll 28s linear infinite}
+.sweep{background:conic-gradient(rgba(230,230,238,.22) 0 var(--a,120deg),transparent 0);animation:spin 1.2s linear infinite}
+.lost-frame{animation:jump 2.6s steps(1) infinite}
+@keyframes grain{0%{transform:translate(0,0)}25%{transform:translate(-30px,20px)}50%{transform:translate(20px,-40px)}75%{transform:translate(-10px,30px)}100%{transform:translate(0,0)}}
+@keyframes scratch{0%{left:12%;opacity:0}4%{opacity:.5}30%{left:15%;opacity:.25}34%{opacity:0}60%{left:71%;opacity:0}63%{opacity:.4}80%{left:68%;opacity:0}100%{left:12%;opacity:0}}
+@keyframes flicker{0%,100%{opacity:1}41%{opacity:1}42%{opacity:.82}43%{opacity:1}77%{opacity:1}78%{opacity:.9}79%{opacity:1}}
+@keyframes clap{0%,52%{transform:rotate(-24deg)}60%{transform:rotate(0)}64%{transform:rotate(-5deg)}68%,86%{transform:rotate(0)}100%{transform:rotate(-24deg)}}
+@keyframes roll{to{transform:translateX(-50%)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes jump{0%{transform:translateY(0)}48%{transform:translateY(-3px) rotate(-1deg)}52%{transform:translateY(2px)}56%{transform:translateY(0)}}
+@media (prefers-reduced-motion: reduce){
+  .grain,.scratch,.flicker,.clap-stick,.strip-track,.sweep,.lost-frame{animation:none}
+}
+</style>
+</helmet>
+<div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
+
+<div style="position: sticky; top: 0; z-index: 10">
+<dc-import name="Nav" current="other" hint-size="100%,68px"></dc-import>
+</div>
+
+<main>
+
+<section style="position: relative; overflow: hidden; padding: 80px 0 96px; background: radial-gradient(ellipse 70% 80% at 70% 40%, #18213A 0%, #0A0E1A 70%)">
+<div aria-hidden="true" class="grain" style="position: absolute; inset: -60px; opacity: .07; pointer-events: none"></div>
+<div aria-hidden="true" class="scratch" style="position: absolute; top: 0; bottom: 0; width: 1px; background: #E6E6EE; opacity: 0; pointer-events: none"></div>
+<div aria-hidden="true" class="scratch scratch-2" style="position: absolute; top: 0; bottom: 0; width: 2px; background: #E6E6EE; opacity: 0; pointer-events: none"></div>
+
+<div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 64px 56px; align-items: center">
+
+<div class="flicker" style="flex: 1.1 1 420px; min-width: 0">
+<span style="display: inline-block; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #0A0E1A; background: #3996B1; padding: 6px 12px; border-radius: 4px; margin-bottom: 18px">Error 404 · Scene missing</span>
+<h1 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(38px, 5.4vw, 68px)">{{headline}}<br><span style="color: #FF6C00">{{headlineAccent}}</span></h1>
+<p style="font-size: 20px; color: #E3E3EA; margin: 20px 0 32px; max-width: 38ch">{{message}}</p>
+<div style="display: flex; gap: 16px; flex-wrap: wrap">
+<a class="btn-primary" href="Main.dc.html" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 14px 26px; font-size: 16px; letter-spacing: .02em; background: #FF6C00; color: #0A0E1A; border: 3px solid #0A0E1A; box-shadow: 5px 5px 0 #3996B1">◀◀ REWIND TO HOME</a>
+<a class="btn-ghost" href="https://portal.sato48.com/archive" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 14px 26px; font-size: 16px; letter-spacing: .02em; border: 2px solid #FFFFFF; color: #FFFFFF">Watch the final cuts</a>
+</div>
+<p style="margin: 28px 0 0; color: #B9B9C6; font-size: 15px">Or cut to: <a href="FilmChallenge.dc.html" style="color: #E6E6EE; font-weight: 800; text-decoration: none">Film Challenge</a> <span aria-hidden="true" style="margin: 0 6px">·</span> <a href="FiveFest.dc.html" style="color: #E6E6EE; font-weight: 800; text-decoration: none">FiveFest</a> <span aria-hidden="true" style="margin: 0 6px">·</span> <a href="Resources.dc.html" style="color: #E6E6EE; font-weight: 800; text-decoration: none">Resources</a></p>
+</div>
+
+<div aria-hidden="true" style="flex: 1 1 340px; min-width: 0; display: flex; justify-content: center; padding-top: 40px">
+<div style="width: 100%; max-width: 420px; margin-right: 18px; transform: rotate(-3deg)">
+<div class="clap-stick" style="height: 52px; background: repeating-linear-gradient(-58deg, #FFFFFF 0 30px, #0A0E1A 30px 60px); border: 4px solid #000000; border-radius: 6px 6px 0 0; box-sizing: border-box"></div>
+<div style="height: 40px; background: repeating-linear-gradient(58deg, #FF6C00 0 30px, #0A0E1A 30px 60px); border: 4px solid #000000; border-top: 0; box-sizing: border-box"></div>
+<div style="background: #141B2D; border: 4px solid #000000; border-top: 0; box-shadow: 12px 12px 0 #3996B1; padding: 22px 24px 26px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0">
+<div style="grid-column: 1 / -1; padding-bottom: 14px; border-bottom: 2px solid #3A4560">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #B9B9C6">Production</div>
+<div style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 26px; line-height: 1.1; margin-top: 4px">SATO48-2027</div>
+</div>
+<div style="padding: 14px 10px 14px 0; border-bottom: 2px solid #3A4560; border-right: 2px solid #3A4560">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #B9B9C6">Roll</div>
+<div style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 30px; line-height: 1.1; margin-top: 4px">??</div>
+</div>
+<div class="lost-frame" style="padding: 14px 10px; border-bottom: 2px solid #3A4560; border-right: 2px solid #3A4560">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #B9B9C6">Scene</div>
+<div style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 30px; line-height: 1.1; margin-top: 4px; color: #FF6C00">404</div>
+</div>
+<div style="padding: 14px 0 14px 10px; border-bottom: 2px solid #3A4560">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #B9B9C6">Take</div>
+<div style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 30px; line-height: 1.1; margin-top: 4px">∞</div>
+</div>
+<div style="grid-column: 1 / 3; padding: 14px 10px 0 0; border-right: 2px solid #3A4560">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #B9B9C6">Director</div>
+<div style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 20px; line-height: 1.2; margin-top: 4px">Whoever typed that link</div>
+</div>
+<div style="padding: 14px 0 0 10px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: #B9B9C6">Status</div>
+<div style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 20px; line-height: 1.2; margin-top: 4px; color: #3996B1">Cut</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<section aria-label="Film strip" style="background: #05070D; border-top: 1px solid #1E2638; border-bottom: 1px solid #1E2638; padding: 36px 0; overflow: hidden">
+<div style="transform: rotate(-1.5deg); margin: 0 -40px">
+<div style="background: #000000; padding: 14px 0">
+<div aria-hidden="true" style="height: 14px; background: repeating-linear-gradient(90deg, transparent 0 12px, #2A3248 12px 28px, transparent 28px 40px); margin-bottom: 12px"></div>
+<div style="overflow: hidden">
+<div class="strip-track" style="display: flex; width: max-content">
+<sc-for list="{{strips}}" as="strip" hint-placeholder-count="2">
+<div style="display: flex">
+<sc-for list="{{frames}}" as="f" hint-placeholder-count="10">
+<div style="width: 200px; height: 136px; margin-right: 12px; flex: none; position: relative; overflow: hidden; border-radius: 6px; background: {{f.bg}}; display: flex; align-items: center; justify-content: center">
+<sc-if value="{{f.isLeader}}" hint-placeholder-val="{{ true }}">
+<div aria-hidden="true" style="position: absolute; left: 0; right: 0; top: 50%; height: 1px; background: rgba(230,230,238,.35)"></div>
+<div aria-hidden="true" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 1px; background: rgba(230,230,238,.35)"></div>
+<div aria-hidden="true" style="position: absolute; width: 108px; height: 108px; border-radius: 50%; border: 2px solid rgba(230,230,238,.55); box-sizing: border-box; overflow: hidden"><div class="sweep" style="position: absolute; inset: 0"></div></div>
+<div aria-hidden="true" style="position: absolute; width: 88px; height: 88px; border-radius: 50%; border: 1px solid rgba(230,230,238,.35); box-sizing: border-box"></div>
+</sc-if>
+<span style="position: relative; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: {{f.size}}; line-height: 1; color: {{f.color}}">{{f.label}}</span>
+</div>
+</sc-for>
+</div>
+</sc-for>
+</div>
+</div>
+<div aria-hidden="true" style="height: 14px; background: repeating-linear-gradient(90deg, transparent 0 12px, #2A3248 12px 28px, transparent 28px 40px); margin-top: 12px"></div>
+</div>
+</div>
+<p style="max-width: 1160px; margin: 28px auto 0; padding: 0 24px; color: #7E8699; font-size: 14px; text-align: center">1,355 films made the final cut. This page wasn't one of them.</p>
+</section>
+
+</main>
+
+<dc-import name="Footer" hint-size="100%,320px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"headline":{"editor":"text","default":"This scene ended up on the","section":"Copy"},"headlineAccent":{"editor":"text","default":"cutting room floor.","section":"Copy"},"message":{"editor":"text","default":"The page you are looking for was cut, moved, or never made it out of the edit bay. Rewind to the start, or go watch the films that made it to the big screen.","section":"Copy"},"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+renderVals() {
+const leader = n => ({ label: String(n), isLeader: true, bg: '#2B2F3A', color: '#E6E6EE', size: '64px' });
+const frames = [
+leader(8), leader(7), leader(6), leader(5), leader(4), leader(3), leader(2),
+{ label: '404', isLeader: false, bg: '#FF6C00', color: '#0A0E1A', size: '56px' },
+{ label: '', isLeader: false, bg: '#141B2D', color: '#FFFFFF', size: '16px' },
+{ label: 'THE END?', isLeader: false, bg: '#141B2D', color: '#3996B1', size: '22px' }
+];
+return {
+headline: this.props.headline ?? 'This scene ended up on the',
+headlineAccent: this.props.headlineAccent ?? 'cutting room floor.',
+message: this.props.message ?? 'The page you are looking for was cut, moved, or never made it out of the edit bay. Rewind to the start, or go watch the films that made it to the big screen.',
+strips: [0, 1],
+frames
+};
+}
+}
+</script>
+</body>
+</html>
