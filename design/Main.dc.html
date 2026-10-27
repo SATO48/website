@@ -16,17 +16,18 @@ a{color:inherit}
 a:hover{color:#FF6C00}
 .s48-hero{background:linear-gradient(180deg, rgba(10,14,26,.55) 0%, rgba(10,14,26,.85) 70%, #0A0E1A 100%), url("/_blob/ef3bd7078a8dc0596ebf136bf8f4d0f0") center/cover}
 .btn-primary{transition:transform .15s, box-shadow .15s}
-.btn-primary:hover{color:#0A0E1A;transform:translate(-2px,-2px)}
-.btn-ghost:hover{background:#FFFFFF;color:#0A0E1A}
-.btn-pink:hover{color:#0A0E1A;filter:brightness(1.08)}
-.burger{display:none}
+.btn-primary:hover{color:#0A0E1A!important;transform:translate(-2px,-2px)}
+.btn-ghost:hover{background:#FFFFFF!important;color:#0A0E1A!important}
+.btn-pink:hover{color:#0A0E1A!important;filter:brightness(1.08)}
+nav a:not([class*="btn-"]):hover,footer a:not([class*="btn-"]):hover{color:#FF6C00!important}
+a[style*="#FF6C00"]:not([class*="btn-"]):hover{color:#FFFFFF!important}
+a[style*="#1F6E87"]:hover{color:#0A0E1A!important}
+a[style*="#E6E6EE"]:hover{color:#FF6C00!important}
 .partner-logo{filter:grayscale(100%);opacity:.8;transition:.2s}
 .partner-cell:hover .partner-logo{filter:none;opacity:1}
 .partner-cell:hover .partner-logo-invert{filter:invert(1) grayscale(1);opacity:1}
 .partners a:hover,.archive a:hover{color:#0A0E1A}
 @media (max-width: 820px){
-  .nav-links,.nav-tickets{display:none}
-  .burger{display:inline-flex}
   .hero-logo{order:-1}
   .hero-ctas a{width:100%;justify-content:center}
   .band{padding-top:56px;padding-bottom:56px}
@@ -103,7 +104,6 @@ a:hover{color:#FF6C00}
 <span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #FF6C00">Prime for Development</span>
 <h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; font-size: 28px">Grow your script.</h3>
 <p style="margin: 0; color: #CFCFDA; flex: 1">Our script development program helps writers take a story from idea to something ready to shoot.</p>
-<a href="#" style="font-weight: 800; text-decoration: none">About P4D →</a>
 </div>
 </article>
 
@@ -155,14 +155,13 @@ a:hover{color:#FF6C00}
 <div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
 <h2 style="margin: 0 0 8px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; font-size: 30px">Made possible by our partners</h2>
 <p style="color: #555555; margin: 0 0 36px">Resident company of the Gillioz Center for Arts &amp; Entertainment.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 18px; align-items: center">
-<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo partner-logo-invert" src="/_blob/a7125de81a09c2c2fe052115a9cadb3d" alt="Gillioz Center for Arts &amp; Entertainment" style="max-height: 66px; max-width: 100%; object-fit: contain; filter: invert(1) grayscale(1)"></div>
-<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/08e0a5571276d57cef3b5bbf4c14869f" alt="Missouri Film Office" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
-<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/fe33de6bc5132e4f0ce7450343280905" alt="Film Festival Alliance member" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
-<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/b24f6cc9f628cff6e770c07af6d85c7a" alt="SW Missouri Film Office" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
-<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/27fa1ffbe44a22aa36a2d7ac42cf6f82" alt="The Ozarks Film Foundry" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 18px">
+<div class="partner-cell" style="flex: 1 1 140px; max-width: 220px; box-sizing: border-box; height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo partner-logo-invert" src="/_blob/a7125de81a09c2c2fe052115a9cadb3d" alt="Gillioz Center for Arts &amp; Entertainment" style="max-height: 66px; max-width: 100%; object-fit: contain; filter: invert(1) grayscale(1)"></div>
+<div class="partner-cell" style="flex: 1 1 140px; max-width: 220px; box-sizing: border-box; height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/08e0a5571276d57cef3b5bbf4c14869f" alt="Missouri Film Office" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div class="partner-cell" style="flex: 1 1 140px; max-width: 220px; box-sizing: border-box; height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/fe33de6bc5132e4f0ce7450343280905" alt="Film Festival Alliance member" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div class="partner-cell" style="flex: 1 1 140px; max-width: 220px; box-sizing: border-box; height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/b24f6cc9f628cff6e770c07af6d85c7a" alt="SW Missouri Film Office" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div class="partner-cell" style="flex: 1 1 140px; max-width: 220px; box-sizing: border-box; height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src="/_blob/27fa1ffbe44a22aa36a2d7ac42cf6f82" alt="The Ozarks Film Foundry" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
 </div>
-<p style="margin: 24px 0 0"><a href="#" style="font-weight: 800">See all sponsors →</a></p>
 </div>
 </section>
 

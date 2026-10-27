@@ -15,10 +15,13 @@ body{margin:0;background:#0A0E1A}
 a{color:inherit}
 a:hover{color:#FF6C00}
 .btn-primary{transition:transform .15s, box-shadow .15s}
-.btn-primary:hover{color:#0A0E1A;transform:translate(-2px,-2px)}
-.btn-ghost:hover{background:#FFFFFF;color:#0A0E1A}
-.btn-pink:hover{color:#0A0E1A;filter:brightness(1.08)}
-.burger{display:none}
+.btn-primary:hover{color:#0A0E1A!important;transform:translate(-2px,-2px)}
+.btn-ghost:hover{background:#FFFFFF!important;color:#0A0E1A!important}
+.btn-pink:hover{color:#0A0E1A!important;filter:brightness(1.08)}
+nav a:not([class*="btn-"]):hover,footer a:not([class*="btn-"]):hover{color:#FF6C00!important}
+a[style*="#FF6C00"]:not([class*="btn-"]):hover{color:#FFFFFF!important}
+a[style*="#1F6E87"]:hover{color:#0A0E1A!important}
+a[style*="#E6E6EE"]:hover{color:#FF6C00!important}
 .doc h2{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-size:26px;line-height:1.15;color:#0A0E1A;margin:48px 0 14px}
 .doc h3{font-size:17px;font-weight:800;color:#0A0E1A;margin:28px 0 8px}
 .doc p{margin:0 0 14px}
@@ -26,10 +29,6 @@ a:hover{color:#FF6C00}
 .doc li{margin:4px 0}
 .doc a{color:#1F6E87;font-weight:800}
 .doc a:hover{color:#0A0E1A}
-@media (max-width: 820px){
-  .nav-links,.nav-tickets{display:none}
-  .burger{display:inline-flex}
-}
 </style>
 </helmet>
 <div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
@@ -48,7 +47,7 @@ a:hover{color:#FF6C00}
 </header>
 
 <main class="doc" style="background: #FAF7F0; color: #2B2B33; font-size: 16.5px; line-height: 1.65; padding: 24px 0 88px">
-<div style="max-width: 760px; margin: 0 auto; padding: 0 24px">
+<div style="max-width: 760px; margin: 0 0 0 max(0px, calc((100% - 1160px) / 2)); padding: 0 24px">
 
 <p style="margin-top: 32px">Challenge Guidelines<br>SATO48-2026 ("SATO48")</p>
 
