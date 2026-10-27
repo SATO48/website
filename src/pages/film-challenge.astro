@@ -40,23 +40,23 @@ import { url, img } from "../lib/paths";
 <h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">How the weekend works.</h2>
 <p style="margin: 0; color: #B9B9C6; max-width: 46ch">Open to everyone: first-timers, hobbyists and working professionals.</p>
 </div>
-<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 24px">
-<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+<li style="min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #3996B1">1</span>
 <h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">Register a team.</h3>
 <p style="margin: 0; color: #CFCFDA">Sign up in Festival Manager. Before Kickoff you can build your crew, scout locations, line up music and gear, and plan food and rides. No shooting yet.</p>
 </li>
-<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<li style="min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #3996B1">2</span>
 <h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">Kickoff.</h3>
 <p style="margin: 0; color: #CFCFDA">Every team gets the Inspiration Package at the same moment. At least one team member has to be there, or join virtually if you live 50 miles or more away.</p>
 </li>
-<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<li style="min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #FF6C00">3</span>
 <h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">48 hours.</h3>
 <p style="margin: 0; color: #CFCFDA">Write, shoot and edit a film of five minutes or less, and make its poster. Turn both in through Festival Manager before the clock runs out.</p>
 </li>
-<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<li style="min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
 <span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #FF6C00">4</span>
 <h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">Screen it. Win it.</h3>
 <p style="margin: 0; color: #CFCFDA">Films play the Festival Screening, where filmmakers and audiences vote. An international jury weighs in, and it all comes together at the Recognition &amp; Awards Ceremony.</p>
@@ -224,6 +224,7 @@ import { url, img } from "../lib/paths";
 <div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Screenplay</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Structure, plot, character development, dialogue and ending.</dd></div>
 <div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Score or Song</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Original music by an identifiable creator that serves the film.</dd></div>
 <div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Sound</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Everything heard that isn't music: dialogue, background and effects.</dd></div>
+<div style="background: #1C2A45; padding: 24px; display: flex; align-items: flex-end"><a href={url("resources/awards-prizes-2026/")} style="font-weight: 800; text-decoration: none; color: #FF6C00">Full award and prize criteria →</a></div>
 </dl>
 </div>
 </section>

@@ -2,7 +2,7 @@
 import { url, img } from "../lib/paths";
 
 interface Props {
-  current?: "home" | "challenge" | "fivefest" | "other";
+  current?: "home" | "challenge" | "fivefest" | "resources" | "other";
 }
 
 const { current = "home" } = Astro.props;
@@ -11,21 +11,20 @@ const on = "#FF6C00", off = "#E6E6EE";
 const links = [
   { label: "Film Challenge", href: url("film-challenge/"), key: "challenge" },
   { label: "FiveFest", href: url("fivefest/"), key: "fivefest" },
-  { label: "Prime for Development", href: "#", key: "p4d" },
-  { label: "TV Show", href: "#", key: "tv" },
-  { label: "About", href: "#", key: "about" },
+  { label: "Resources", href: url("resources/"), key: "resources" },
 ];
 ---
 
 <nav class="site-nav" style="font-family: Inter, Arial, sans-serif; color: #FFFFFF; line-height: 1.5; background: rgba(10,14,26,.92); backdrop-filter: blur(8px); border-bottom: 1px solid #1E2638">
-<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 28px; height: 68px">
-<a href={url()}><img src={img("3895383ea4894dab2ac8a8e35b39d7d0.svg")} alt="SATO48 2027, home" style="height: 40px; display: block"></a>
-<ul class="nav-links" style="display: flex; gap: 22px; list-style: none; margin: 0 0 0 auto; padding: 0; font-weight: 600; font-size: 15px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; position: relative; display: flex; flex-wrap: wrap; align-items: center; column-gap: 28px">
+<a href={url()} style="height: 68px; display: flex; align-items: center; margin-right: auto"><img src={img("3895383ea4894dab2ac8a8e35b39d7d0.svg")} alt="SATO48 2027, home" style="height: 40px; display: block"></a>
+<ul class="nav-links" style="display: flex; align-items: center; justify-content: flex-end; gap: 22px; list-style: none; margin: 0; padding: 0 clamp(0px, calc((100% - 640px) * 999), 156px) clamp(0px, calc((640px - 100%) * 999), 14px) 0; flex: 1 1 max(0px, calc((640px - 100%) * 999)); white-space: nowrap; font-weight: 600; font-size: 15px">
 {links.map((l) => (
 <li><a href={l.href} style={`text-decoration: none; color: ${current === l.key ? on : off}`}>{l.label}</a></li>
 ))}
+<li aria-hidden="true" style="flex: 1 1 0; max-width: max(0px, calc((640px - 100%) * 999))"></li>
 </ul>
-<a class="btn-primary nav-tickets" href="https://portal.sato48.com/archive" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 9px 18px; font-size: 14px; letter-spacing: .02em; background: #FF6C00; color: #0A0E1A; border: 3px solid #0A0E1A; box-shadow: 3px 3px 0 #3996B1">▶ The Archive</a>
+<a class="btn-primary nav-tickets" href="https://portal.sato48.com/archive" style="position: absolute; top: 14px; right: 24px; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 6px 16px; font-size: 14px; letter-spacing: .02em; background: #FF6C00; color: #0A0E1A; border: 3px solid #0A0E1A; box-shadow: 3px 3px 0 #3996B1">▶ The Archive</a>
 <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" style="margin-left: auto; font-size: 26px; background: none; border: 0; color: #FFFFFF; width: 44px; height: 44px; align-items: center; justify-content: center; cursor: pointer">☰</button>
 </div>
 <div id="mobile-menu" class="mobile-menu" style="border-top: 1px solid #1E2638; padding: 8px 24px 20px">
