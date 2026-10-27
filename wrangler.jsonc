@@ -1,0 +1,13 @@
+// Static site: deploy uploads the Astro build output as Workers static assets.
+// Keeping this file present stops `wrangler deploy` from auto-configuring the
+// Astro Cloudflare (SSR) adapter during Workers Builds.
+{
+  "name": "website",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  },
+  // Required by `wrangler preview`, which Workers Builds runs for non-production branches.
+  "previews": {}
+}
