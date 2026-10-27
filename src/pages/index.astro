@@ -1,0 +1,166 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { url, img } from "../lib/paths";
+
+// Announcement bar above the nav; flip showAnnouncement to turn it on.
+const showAnnouncement = false;
+const announcementText = "🎟️ FiveFest is coming: [DATE] at [VENUE]";
+const announcementButton = "Buy tickets →";
+const announcementLink = "https://buytickets.at/sato48/2462108";
+// Offset shadow color on the hero buttons, logo and archive headline.
+const shadowColor = "#3996B1";
+const heroBackground = `background-image: linear-gradient(180deg, rgba(10,14,26,.55) 0%, rgba(10,14,26,.85) 70%, #0A0E1A 100%), url(${img("ef3bd7078a8dc0596ebf136bf8f4d0f0.jpg")})`;
+---
+
+<Layout title="SATO48 Home">
+<div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
+
+{showAnnouncement && (
+<div style="background: #FF6C00; color: #0A0E1A; font-weight: 800; text-align: center; padding: 10px 16px; font-size: 15px; display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px 10px">
+<span>{announcementText}</span>
+<a href={announcementLink} target="_blank" rel="noopener" style="background: #0A0E1A; color: #FF6C00; padding: 4px 12px; border-radius: 999px; text-decoration: none; white-space: nowrap">{announcementButton}</a>
+</div>
+)}
+
+<div style="position: sticky; top: 0; z-index: 10">
+<Nav current="home" />
+</div>
+
+<header class="s48-hero" style={`${heroBackground}; position: relative; overflow: hidden; padding: 72px 0 88px`}>
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1.05 1 420px; min-width: 0">
+<span style="display: inline-block; font-weight: 800; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: #0A0E1A; background: #3996B1; padding: 6px 12px; border-radius: 4px; margin-bottom: 18px">Springfield &amp; the Ozarks · 22 years</span>
+<h1 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(40px, 6vw, 76px)">48 hours.<br>5 minutes.<br><span style="color: #FF6C00">Make it count.</span></h1>
+<p style="font-size: 20px; color: #E3E3EA; margin: 20px 0 32px; max-width: 34ch">The Springfield And The Ozarks 48-Hour Film Challenge &amp; Festival. Teams get one weekend to make a film of five minutes or less, then we put it on the big screen.</p>
+<div class="hero-ctas" style="display: flex; gap: 16px; flex-wrap: wrap">
+<a class="btn-primary" href="https://portal.sato48.com/archive" style={`display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 14px 26px; font-size: 16px; letter-spacing: .02em; background: #FF6C00; color: #0A0E1A; border: 3px solid #0A0E1A; box-shadow: 5px 5px 0 ${shadowColor}`}>▶ EXPLORE THE ARCHIVE</a>
+<a class="btn-ghost" href="https://portal.sato48.com/archive/2026/events/awards-oct" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 14px 26px; font-size: 16px; letter-spacing: .02em; border: 2px solid #FFFFFF; color: #FFFFFF">Watch the 2026 awards</a>
+</div>
+</div>
+<div class="hero-logo" style="flex: 1 1 380px; min-width: 0">
+<img src={img("3895383ea4894dab2ac8a8e35b39d7d0.svg")} alt="SATO48 2027 logo" style={`display: block; width: 100%; background: #0A0E1A; padding: 7% 6%; border: 4px solid #000000; box-shadow: 12px 12px 0 ${shadowColor}; transform: rotate(1.5deg); box-sizing: border-box`}>
+</div>
+</div>
+</header>
+
+<div aria-hidden="true" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); height: 10px">
+<div style="background: #3996B1"></div>
+<div style="background: #FF6C00"></div>
+</div>
+
+<section class="band" style="padding: 88px 0">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">Three ways in.</h2>
+<p style="margin: 0; color: #B9B9C6; max-width: 46ch">Make a film in a weekend, bring your five-minute short from anywhere in the world, or grow a script with us.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+
+<article style="flex: 1 1 300px; min-width: 0; background: #141B2D; border-radius: 18px; overflow: hidden; border: 1px solid #232C40; display: flex; flex-direction: column">
+<div style="height: 10px; background: #3996B1"></div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">The Film Challenge</span>
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; font-size: 28px">48 hours. Go.</h3>
+<p style="margin: 0; color: #CFCFDA; flex: 1">At Kickoff every team gets the Inspiration Package at the same moment. Then you have 48 hours to write, shoot and edit a film of five minutes or less.</p>
+<a href={url("film-challenge/")} style="font-weight: 800; text-decoration: none">Challenge guidelines →</a>
+</div>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: linear-gradient(160deg, #1C2A45, #141B2D 60%); border-radius: 18px; overflow: hidden; border: 1px solid #FFFFFF; display: flex; flex-direction: column">
+<div style="height: 10px; background: #FFFFFF"></div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
+<img src={img("f162ec5eeede26d210b14b591a35d743.png")} alt="FiveFest: Five Minute Film Festival" style="height: 48px; width: auto; align-self: flex-start; background: #FFFFFF; padding: 6px 10px; border-radius: 8px">
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; font-size: 28px">Five minutes, worldwide.</h3>
+<p style="margin: 0; color: #CFCFDA; flex: 1">A festival of five-minute films open to filmmakers everywhere. Big ideas, short runtime, one packed screening.</p>
+<a href="https://portal.sato48.com/archive/fivefest" style="font-weight: 800; text-decoration: none; color: #FF6C00">Watch FiveFest films →</a>
+<a href={url("fivefest/")} style="font-weight: 800; text-decoration: none">FiveFest guidelines →</a>
+</div>
+</article>
+
+<article style="flex: 1 1 300px; min-width: 0; background: #141B2D; border-radius: 18px; overflow: hidden; border: 1px solid #232C40; display: flex; flex-direction: column">
+<div style="height: 10px; background: #FF6C00"></div>
+<div style="padding: 28px; display: flex; flex-direction: column; gap: 12px; flex: 1">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #FF6C00">Prime for Development</span>
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; font-size: 28px">Grow your script.</h3>
+<p style="margin: 0; color: #CFCFDA; flex: 1">Our script development program helps writers take a story from idea to something ready to shoot.</p>
+<a href="#" style="font-weight: 800; text-decoration: none">About P4D →</a>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="band archive" style="padding: 88px 0; background: #FAF7F0; color: #0A0E1A; overflow: hidden">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+<div style="flex: 1 1 380px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(36px, 5vw, 60px)">1,355 films.<br><span style={`background: #FF6C00; padding: 0 8px; box-shadow: 4px 4px 0 ${shadowColor}`}>One archive.</span></h2>
+<p style="font-size: 19px; margin: 20px 0 28px; color: #2B2B33; max-width: 40ch">Every team, every film and every winner, going back to 2006. All made in 48 hours. Find your favorites, revisit past winners, and see what Ozarks filmmakers have been up to.</p>
+<a class="btn-primary" href="https://portal.sato48.com/archive" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 14px 26px; font-size: 16px; letter-spacing: .02em; background: #FF6C00; color: #0A0E1A; border: 3px solid #0A0E1A; box-shadow: 5px 5px 0 #3996B1">▶ Browse The Archive</a>
+<div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 26px; font-weight: 800; font-size: 13px">
+<span style="border: 2px solid #0A0E1A; border-radius: 999px; padding: 3px 10px">2026</span>
+<span style="border: 2px solid #0A0E1A; border-radius: 999px; padding: 3px 10px">2025</span>
+<span style="border: 2px solid #0A0E1A; border-radius: 999px; padding: 3px 10px">2024</span>
+<span style="border: 2px solid #0A0E1A; border-radius: 999px; padding: 3px 10px">2023</span>
+<span style="border: 2px solid #0A0E1A; border-radius: 999px; padding: 3px 10px">…</span>
+<span style="border: 2px solid #0A0E1A; border-radius: 999px; padding: 3px 10px">2006</span>
+</div>
+</div>
+<a href="https://portal.sato48.com/archive" aria-label="Browse The Archive" style="flex: 1.1 1 420px; min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; transform: rotate(-3deg); padding-bottom: 26px">
+<img src={img("9f245de0ff15d62d94dbeae9b2853350.jpg")} alt="In Their Own Way poster (2026 Best Film)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25)">
+<img src={img("5e1b6eb97ed0cd6a9dc363dd2e8934ba.jpg")} alt="Say Cheese, Bingles! poster (2026 Audience Favorite)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25); transform: translateY(26px)">
+<img src={img("ebc57efbec50b73e2a482f533f9dd728.jpg")} alt="Kitchen Heat poster (2026 Best Film)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25)">
+<img src={img("ba73e0e7da68f0c52afe5b339057b1d7.jpg")} alt="Annie Sullivan's Methodically Misaligned Day poster (2026 Poster Design)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25); transform: translateY(26px)">
+<img src={img("5e425a06d761b2e81a6a6183ff30db5e.jpg")} alt="The Sacred Sip poster (2026 Direction)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25)">
+<img src={img("b45a748e0c2ed6b57224487938976f2d.jpg")} alt="Big Brother, little brother poster (2026 Editing, Lead Performance)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25); transform: translateY(26px)">
+<img src={img("aa8f588b360f16cc8e546dc4a9eeb8e3.jpg")} alt="Slaydoh 69 poster (2026 Direction)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25)">
+<img src={img("f2ea7334123b0f43ef2b5ae3ff876927.jpg")} alt="TV Guide poster (2026 Direction and Editing runner-up)" style="width: 100%; aspect-ratio: 2/3; object-fit: cover; border-radius: 8px; box-shadow: 0 10px 24px rgba(0,0,0,.25); transform: translateY(26px)">
+</a>
+</div>
+</section>
+
+<section class="band" style="padding: 88px 0; background: #141B2D">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1.2 1 420px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(30px, 3.6vw, 44px)">SATO48 films, <span style="color: #3996B1">year-round</span>, on the big screen.</h2>
+<p style="color: #CFCFDA; margin: 14px 0 0; font-size: 18px">Now playing before every screening at College Station Theaters, with new segments every month celebrating Ozarks filmmakers all year long.</p>
+</div>
+<div style="flex: 1 1 340px; min-width: 0; background: #000000; border-radius: 18px; padding: 32px; text-align: center; border: 1px solid #28324A">
+<img src={img("6ddeaa9e7fafb1f39a180a4ec5b8c23a.png")} alt="College Station Theaters: Cinema. Reimagined." style="max-width: 100%">
+</div>
+</div>
+</section>
+
+<section class="band partners" style="padding: 88px 0; background: #FFFFFF; color: #0A0E1A; text-align: center">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<h2 style="margin: 0 0 8px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; font-size: 30px">Made possible by our partners</h2>
+<p style="color: #555555; margin: 0 0 36px">Resident company of the Gillioz Center for Arts &amp; Entertainment.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 18px; align-items: center">
+<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo partner-logo-invert" src={img("a7125de81a09c2c2fe052115a9cadb3d.png")} alt="Gillioz Center for Arts &amp; Entertainment" style="max-height: 66px; max-width: 100%; object-fit: contain; filter: invert(1) grayscale(1)"></div>
+<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src={img("08e0a5571276d57cef3b5bbf4c14869f.png")} alt="Missouri Film Office" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src={img("fe33de6bc5132e4f0ce7450343280905.png")} alt="Film Festival Alliance member" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src={img("b24f6cc9f628cff6e770c07af6d85c7a.png")} alt="SW Missouri Film Office" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+<div class="partner-cell" style="height: 90px; display: grid; place-items: center; border: 1px solid #EEEEEE; border-radius: 12px; padding: 12px"><img class="partner-logo" src={img("27fa1ffbe44a22aa36a2d7ac42cf6f82.png")} alt="The Ozarks Film Foundry" style="max-height: 66px; max-width: 100%; object-fit: contain"></div>
+</div>
+<p style="margin: 24px 0 0"><a href="#" style="font-weight: 800">See all sponsors →</a></p>
+</div>
+</section>
+
+<Footer />
+
+</div>
+</Layout>
+
+<style is:global>
+.s48-hero{background-position:center;background-size:cover}
+.partner-logo{filter:grayscale(100%);opacity:.8;transition:.2s}
+.partner-cell:hover .partner-logo{filter:none;opacity:1}
+.partner-cell:hover .partner-logo-invert{filter:invert(1) grayscale(1);opacity:1}
+.partners a:hover,.archive a:hover{color:#0A0E1A}
+@media (max-width: 820px){
+  .hero-logo{order:-1}
+  .hero-ctas a{width:100%;justify-content:center}
+}
+</style>

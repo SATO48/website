@@ -1,0 +1,258 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import { url, img } from "../lib/paths";
+---
+
+<Layout title="The Film Challenge · SATO48">
+<div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
+
+<div style="position: sticky; top: 0; z-index: 10">
+<Nav current="challenge" />
+</div>
+
+<header style="padding: 32px 0 56px; border-bottom: 1px solid #1E2638">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #B9B9C6; margin-bottom: 40px"><a href={url("")} style="color: #B9B9C6; text-decoration: none">Home</a> <span aria-hidden="true" style="margin: 0 6px">/</span> <span aria-current="page" style="color: #E6E6EE">Film Challenge</span></nav>
+<div style="display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: end">
+<div style="flex: 1 1 480px; min-width: 0">
+<p style="margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3996B1">48-hour filmmaking · since 2006</p>
+<h1 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(36px, 4.5vw, 56px)">The Film Challenge</h1>
+<p style="font-size: 18px; color: #E3E3EA; margin: 16px 0 0; max-width: 52ch">One weekend, one film. Teams get their Inspiration Package at Kickoff, then have 48 hours to write, shoot and edit an original film of five minutes or less. Every film that meets the rules screens at the festival.</p>
+</div>
+<aside style="flex: 0 1 380px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 24px">
+<p style="margin: 0 0 8px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3996B1">SATO48-2027</p>
+<dl style="margin: 0 0 20px">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #232C40"><dt style="color: #B9B9C6">Registration opens</dt><dd style="margin: 0; font-weight: 800; text-align: right">January</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 1px solid #232C40"><dt style="color: #B9B9C6">Kickoff</dt><dd style="margin: 0; font-weight: 800; text-align: right">Friday, April 23</dd></div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 10px 0; border-bottom: 0"><dt style="color: #B9B9C6">Awards Ceremony</dt><dd style="margin: 0; font-weight: 800; text-align: right">Saturday, June 5</dd></div>
+</dl>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center"><a class="btn-primary" href="https://portal.sato48.com/archive/2026" style="display: inline-flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; border-radius: 999px; padding: 10px 18px; font-size: 14px; letter-spacing: .02em; background: #FF6C00; color: #0A0E1A; border: 3px solid #0A0E1A; box-shadow: 3px 3px 0 #3996B1">▶ Watch the 2026 films</a><a href="#guidelines" style="font-weight: 800; font-size: 14px; text-decoration: none; color: #E6E6EE">Guidelines ↓</a></div>
+</aside>
+</div>
+</div>
+</header>
+
+<section class="band" style="padding: 88px 0">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">How the weekend works.</h2>
+<p style="margin: 0; color: #B9B9C6; max-width: 46ch">Open to everyone: first-timers, hobbyists and working professionals.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 24px">
+<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #3996B1">1</span>
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">Register a team.</h3>
+<p style="margin: 0; color: #CFCFDA">Sign up in Festival Manager. Before Kickoff you can build your crew, scout locations, line up music and gear, and plan food and rides. No shooting yet.</p>
+</li>
+<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #3996B1">2</span>
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">Kickoff.</h3>
+<p style="margin: 0; color: #CFCFDA">Every team gets the Inspiration Package at the same moment. At least one team member has to be there, or join virtually if you live 50 miles or more away.</p>
+</li>
+<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #FF6C00">3</span>
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">48 hours.</h3>
+<p style="margin: 0; color: #CFCFDA">Write, shoot and edit a film of five minutes or less, and make its poster. Turn both in through Festival Manager before the clock runs out.</p>
+</li>
+<li style="flex: 1 1 220px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 40px; line-height: 1; color: #FF6C00">4</span>
+<h3 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 24px; line-height: 1.05">Screen it. Win it.</h3>
+<p style="margin: 0; color: #CFCFDA">Films play the Festival Screening, where filmmakers and audiences vote. An international jury weighs in, and it all comes together at the Recognition &amp; Awards Ceremony.</p>
+</li>
+</ol>
+</div>
+</section>
+
+<section class="band" style="padding: 0 0 88px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<figure style="flex: 1.1 1 420px; min-width: 0; margin: 0">
+<img src={img("db8ec6b90b2d19b81fa36b8197641ce1.jpg")} alt="Red carpet, velvet ropes and SATO48 sponsor backdrops set up in a historic theater lobby for the awards" style="display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 18px; border: 1px solid #28324A; box-shadow: 12px 12px 0 #3996B1">
+</figure>
+<div style="flex: 1 1 360px; min-width: 0">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Recognition &amp; Awards Ceremony</span>
+<h2 style="margin: 12px 0 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">It ends on the red carpet.</h2>
+<p style="color: #CFCFDA; margin: 20px 0 0; font-size: 18px; max-width: 42ch">Audience and filmmaker votes and the international jury's picks all come together at a red-carpet night. It's open to everyone, from seasoned filmmakers to people who just love movies.</p>
+<p style="margin: 24px 0 0; font-weight: 800; color: #FFFFFF">SATO48-2027: Saturday, June 5</p>
+</div>
+</div>
+</section>
+
+<section class="band" style="padding: 88px 0; background: #141B2D">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: start">
+<div style="flex: 1 1 380px; min-width: 0">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">The Inspiration Package</span>
+<h2 style="margin: 12px 0 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">Same prompt.<br>Every team.<br>Same second.</h2>
+<p style="color: #CFCFDA; margin: 20px 0 0; font-size: 18px; max-width: 42ch">The Inspiration Package is revealed at Kickoff and is the heart of the Challenge. Every element in it has to be in your film. A film missing any element is not screened, no matter when it was turned in.</p>
+<p style="margin: 24px 0 0"><a href={url("resources/")} style="font-weight: 800; text-decoration: none; color: #FF6C00">See past Inspiration Packages →</a></p>
+</div>
+<article style="flex: 1.2 1 440px; min-width: 0; background: #0A0E1A; border: 1px solid #28324A; border-radius: 18px; padding: 32px; box-shadow: 12px 12px 0 #3996B1">
+<p style="margin: 0; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #B9B9C6">SATO48-2026 Inspiration Package</p>
+<h3 style="margin: 10px 0 20px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 30px; line-height: 1.05">Invent a Conflict Worth the Fight</h3>
+<ol style="margin: 0; padding-left: 22px; display: grid; gap: 12px; color: #E3E3EA">
+<li>The central conflict is between your Leading Character and Supporting Character over an <strong>invented topic</strong>, not drawn from any existing hot-button issue, debate or controversy.</li>
+<li>That conflict is shown for <strong>at least one consecutive minute through physical action only</strong>, with no words of any kind, spoken, written or otherwise.</li>
+<li>An <strong>invented artifact</strong> closely tied to the conflict appears in at least one close-up.</li>
+<li>One character <strong>decisively prevails</strong> when the other changes their belief, decision, behavior or course of action. Even teams: the Leading Character prevails. Odd teams: the Supporting Character prevails.</li>
+</ol>
+<p style="margin: 20px 0 0; padding-top: 16px; border-top: 1px solid #1E2638; color: #CFCFDA"><strong style="color: #FF6C00">Prohibition:</strong> prevailing is not allowed through injury, threat of injury, death, or the use or brandishing of any weapon.</p>
+</article>
+</div>
+</section>
+
+<section id="guidelines" class="band paper" style="padding: 88px 0; background: #FAF7F0; color: #0A0E1A">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
+<div>
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">2026 guidelines</span>
+<h2 style="margin: 12px 0 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">The rules of the weekend.</h2>
+</div>
+<p style="margin: 0; color: #2B2B33; max-width: 46ch">A summary of the SATO48-2026 guidelines. The 2027 guidelines are published when registration opens. The full text is the final word.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px">
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Registration</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>$35 per team, non-refundable, paid by card in Festival Manager.</li>
+<li>Includes a free submission to FiveFest.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Your team</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>Open to everyone. Everyone volunteers: no paid participation.</li>
+<li>Anyone who contributes in any way counts as a team member.</li>
+<li>At least one member at Kickoff; virtual if the team owner lives 50+ miles (80 km) away.</li>
+<li>Parental or guardian consent for anyone under 18.</li>
+<li>Follow all local, state and national safety guidelines.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Your film</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>Uses every Inspiration Package element.</li>
+<li>At least two principal characters (voiceovers and dual roles are fine).</li>
+<li>Made entirely within the 48 hours.</li>
+<li>References "SATO48-2026" wherever it screens.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Technical requirements</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>Five minutes or less (00:05:00:00).</li>
+<li>Opening Event Credit: team name, the event date, film title.</li>
+<li>Closing Event Credit: the video clip SATO48 provides to the team owner.</li>
+<li>Any cameras and sound gear. Computer-generated material only if made during the 48 hours.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Not allowed</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>Shooting or creating footage before Kickoff.</li>
+<li>Stock footage or any pre-existing material.</li>
+<li>Copyrighted material without permission: logos, music, signage, brand names.</li>
+<li>Posting the film online before July 1. A trailer goes to Festival Manager first.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Music &amp; performance awards</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>Log all music under Music Releases in Festival Manager.</li>
+<li>Original music needs a Rights Request and a Musician's Agreement, both uploaded.</li>
+<li>Royalty-free music is allowed but can't win Score or Song.</li>
+<li>Lead and Supporting Performance awards are for human actors in their own original performances.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Poster &amp; trailer</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>A poster is required, turned in within the 48 hours.</li>
+<li>JPEG or PNG, 1920×1080, with the film title and team name.</li>
+<li>Optional trailer: one minute or less, uploaded to Festival Manager before it's shared.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Late films &amp; disqualification</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>No grace period: late films can't win awards or prizes.</li>
+<li>Late films that meet the Inspiration Package and technical rules still screen.</li>
+<li>Missing Inspiration Package elements, or breaking technical or safety rules, can disqualify a film.</li>
+</ul>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px">
+<h3 style="margin: 0 0 12px; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; font-size: 22px; line-height: 1.1">Screenings &amp; broadcast</h3>
+<ul style="margin: 0; padding-left: 20px; display: grid; gap: 6px; color: #2B2B33">
+<li>Every film that meets the Inspiration Package and technical rules screens at the festival, on time or late.</li>
+<li>Those films are also considered for SATO48 The TV Show.</li>
+</ul>
+</article>
+
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px 28px; margin-top: 32px; font-weight: 800">
+<a href={url("resources/challenge-guidelines-2026/")} style="text-decoration: none; color: #1F6E87">Full 2026 guidelines →</a>
+<a href={url("resources/challenge-terms-2026/")} style="text-decoration: none; color: #1F6E87">Terms &amp; Agreement →</a>
+<a href="https://help.sato48.com/en/" style="text-decoration: none; color: #1F6E87">Helpdesk →</a>
+</div>
+</div>
+</section>
+
+<section class="band" style="padding: 88px 0">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">What the jury looks for.</h2>
+<p style="margin: 0; color: #B9B9C6; max-width: 46ch">Films turned in on time compete for these awards. Audience Favorite is voted by filmmakers and audiences; the rest by the international jury.</p>
+</div>
+<dl style="margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1px; background: #232C40; border: 1px solid #232C40; border-radius: 18px; overflow: hidden">
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800; color: #FF6C00">Best Film</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Best interpretation of the Inspiration Package: inventive use and integration of its elements.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800; color: #3996B1">Audience Favorite</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Chosen by audiences and filmmakers at the festival and online.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Cinematography</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Effective use of light and shadow in telling the story.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Direction</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Actors, camera placement and movement, and composition on screen.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Editing</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Transitions, tempo, mood changes and continuity.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Lead &amp; Supporting Performance</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Emotional effectiveness and believability in the role.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Poster</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Clear, legible from afar, includes the event logo, and leaves a lasting impression.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Production Design / Art Direction</dt><dd style="margin: 6px 0 0; color: #CFCFDA">The overall look: color, texture, props, set pieces and locations.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Screenplay</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Structure, plot, character development, dialogue and ending.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Score or Song</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Original music by an identifiable creator that serves the film.</dd></div>
+<div style="background: #141B2D; padding: 24px"><dt style="font-weight: 800">Sound</dt><dd style="margin: 6px 0 0; color: #CFCFDA">Everything heard that isn't music: dialogue, background and effects.</dd></div>
+</dl>
+</div>
+</section>
+
+<section class="band" style="padding: 0 0 88px">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(30px, 3.6vw, 40px)">2026 sponsored prizes.</h2>
+<p style="margin: 0; color: #B9B9C6; max-width: 46ch">Prizes change every year. Teams opt in to the ones they're going for.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 20px">
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">You Gotta See It</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Alamo Drafthouse Cinema</p><p style="margin: 0; color: #CFCFDA">For the quirky, offbeat and surprising. $300 in Alamo passes.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Best Opening / Closing Credits</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Missouri Film Office</p><p style="margin: 0; color: #CFCFDA">Exceptional storytelling with motion graphics in the opening or closing credits.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Golden Weaver</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Graceway Baptist Church</p><p style="margin: 0; color: #CFCFDA">A character's moral dilemma, resolved without violence and inspired by Jesus' New Testament teachings.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Family Film Project</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">James Bacon</p><p style="margin: 0; color: #CFCFDA">Films directed and acted by a parent or grandparent together with their kids.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Al LaBrie Outstanding Set Design</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">LaBrie Family</p><p style="margin: 0; color: #CFCFDA">For teams that build a set piece for their film.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Dapper Timeless Style (Hair Design)</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Dapper Barber</p><p style="margin: 0; color: #CFCFDA">Hair styling that builds character, era and atmosphere with intention.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Best Nerd Out Film</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Fanatics and the Fan</p><p style="margin: 0; color: #CFCFDA">Celebrates nerd culture: games, sci-fi, horror, fantasy, anime, comics, martial arts, westerns.</p></article>
+<article style="flex: 1 1 260px; min-width: 0; border: 1px solid #232C40; border-radius: 18px; padding: 24px"><h3 style="margin: 0; font-size: 18px; font-weight: 800">Most Creative Product Placement</h3><p style="margin: 4px 0 10px; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #3996B1">Springfield Creatives</p><p style="margin: 0; color: #CFCFDA">A made-up product, service or company, shown or named on screen. No real brands.</p></article>
+</div>
+<p style="margin: 32px 0 0"><a href={url("resources/awards-prizes-2026/")} style="font-weight: 800; text-decoration: none; color: #FF6C00">Full award and prize criteria →</a></p>
+</div>
+</section>
+
+<Footer />
+
+</div>
+</Layout>
+
+<style is:global>
+.paper a:hover{color:#1F6E87}
+</style>
