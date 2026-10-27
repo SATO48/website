@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://next.sato48.com/sitemap-index.xml

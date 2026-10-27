@@ -7,9 +7,14 @@
   "scripts": {
     "dev": "bun --bun astro dev",
     "build": "bun --bun astro build",
-    "preview": "bun --bun astro preview"
+    "preview": "bun --bun astro preview",
+    "og-image": "bun scripts/og-image.ts"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.4.2"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }

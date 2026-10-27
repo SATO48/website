@@ -11,10 +11,29 @@ const announcementButton = "Buy tickets →";
 const announcementLink = "https://buytickets.at/sato48/2462108";
 // Offset shadow color on the hero buttons, logo and archive headline.
 const shadowColor = "#3996B1";
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://next.sato48.com/#org",
+      name: "SATO48",
+      alternateName: "Springfield And The Ozarks 48-Hour Film Challenge & Festival",
+      url: "https://next.sato48.com/",
+      logo: new URL(img("3895383ea4894dab2ac8a8e35b39d7d0.svg"), Astro.site).href,
+      email: "support@sato48.com",
+      foundingDate: "2006",
+      address: { "@type": "PostalAddress", addressLocality: "Springfield", addressRegion: "MO", addressCountry: "US" },
+    },
+    { "@type": "WebSite", name: "SATO48", url: "https://next.sato48.com/", publisher: { "@id": "https://next.sato48.com/#org" } },
+  ],
+};
 const heroBackground = `background-image: linear-gradient(180deg, rgba(10,14,26,.55) 0%, rgba(10,14,26,.85) 70%, #0A0E1A 100%), url(${img("ef3bd7078a8dc0596ebf136bf8f4d0f0.jpg")})`;
 ---
 
-<Layout title="SATO48 Home">
+<Layout title="SATO48 · Springfield & the Ozarks 48-Hour Film Challenge & Festival">
+<script type="application/ld+json" slot="head" set:html={JSON.stringify(structuredData)} />
 <div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
 
 {showAnnouncement && (
