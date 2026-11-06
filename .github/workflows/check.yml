@@ -15,6 +15,10 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version-file: package.json
+      # The build runs on Node: Bun can't run Astro's Cloudflare build.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - run: bun install --frozen-lockfile
       - run: bun scripts/design-sync.ts check
       - run: bun run build

@@ -1,9 +1,13 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-  storage: {
-    kind: 'local',
-  },
+  // Production edits commit to GitHub, which triggers a Cloudflare rebuild. Locally, edits
+  // write straight to disk; set PUBLIC_KEYSTATIC_STORAGE=github in .env to try GitHub mode
+  // in dev (also how you create the Keystatic GitHub App the first time).
+  storage:
+    import.meta.env.PROD || import.meta.env.PUBLIC_KEYSTATIC_STORAGE === 'github'
+      ? { kind: 'github', repo: 'SATO48/website' }
+      : { kind: 'local' },
   collections: {
     inspirationPackages: collection({
       label: 'Inspiration Packages',
