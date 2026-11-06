@@ -1,0 +1,30 @@
+seo:
+  title: Page not found · SATO48
+  description: This page was cut, moved, or never made it out of the edit bay.
+badge: Error 404 · Scene missing
+headline: |-
+  This scene ended up on the
+  *cutting room floor.*
+message: >-
+  The page you are looking for was cut, moved, or never made it out of the edit
+  bay. Rewind to the start, or go watch the films that made it to the big
+  screen.
+primaryButton:
+  label: ◀◀ REWIND TO HOME
+  href: /
+secondaryButton:
+  label: Watch the final cuts
+  href: https://portal.sato48.com/archive
+shortcutsLabel: 'Or cut to:'
+shortcuts:
+  - label: Film Challenge
+    href: /film-challenge/
+  - label: FiveFest
+    href: /fivefest/
+  - label: Resources
+    href: /resources/
+slate:
+  production: SATO48-2027
+  director: Whoever typed that link
+  status: Cut
+filmStripCaption: 1,355 films made the final cut. This page wasn't one of them.

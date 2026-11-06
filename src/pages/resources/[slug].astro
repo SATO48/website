@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/Nav.astro";
+import Footer from "../../components/Footer.astro";
+import { href } from "../../lib/paths";
+import { getCollection, inline } from "../../lib/content";
+
+// One page per entry in Keystatic's Documents collection (src/content/documents/).
+export async function getStaticPaths() {
+  const documents = await getCollection("documents");
+  return documents.map((doc) => ({ params: { slug: doc.slug }, props: { doc } }));
+}
+
+const { doc } = Astro.props;
+const name = `${doc.title} ${doc.year}`;
+---
+
+<Layout title={`${name} · SATO48`} description={doc.description}>
+<div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
+
+<div style="position: sticky; top: 0; z-index: 10">
+<Nav />
+</div>
+
+<header style="padding: 32px 0 56px; border-bottom: 1px solid #1E2638">
+<div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #B9B9C6; margin-bottom: 40px"><a href={href("/")} style="color: #B9B9C6; text-decoration: none">Home</a> <span aria-hidden="true" style="margin: 0 6px">/</span> <a href={href("/resources/")} style="color: #B9B9C6; text-decoration: none">Resources</a> <span aria-hidden="true" style="margin: 0 6px">/</span> <span aria-current="page" style="color: #E6E6EE">{name}</span></nav>
+<p style="margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3996B1">{doc.eyebrow}</p>
+<h1 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(36px, 4.5vw, 56px)">{doc.title}</h1>
+{doc.intro && <p class="doc-intro" style="font-size: 18px; color: #E3E3EA; margin: 16px 0 0; max-width: 60ch" set:html={inline(doc.intro)} />}
+</div>
+</header>
+
+<main class="doc" style="background: #FAF7F0; color: #2B2B33; font-size: 16.5px; line-height: 1.65; padding: 24px 0 88px">
+<div style="max-width: 760px; margin: 0 0 0 max(0px, calc((100% - 1160px) / 2)); padding: 0 24px">
+
+<div class="doc-body" set:html={doc.body} />
+
+<p style="margin-top: 48px; padding-top: 20px; border-top: 1px solid #E2DDD2"><a href={href("/resources/")}>← All resources</a></p>
+</div>
+</main>
+
+<Footer />
+
+</div>
+</Layout>
+
+<style is:global>
+.doc-intro a{color:#FF6C00;font-weight:800}
+.doc-intro a:hover{color:#FFFFFF}
+.doc-body > p:first-child{margin-top:32px}
+.doc h2{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-size:26px;line-height:1.15;color:#0A0E1A;margin:48px 0 14px}
+.doc h3{font-size:17px;font-weight:800;color:#0A0E1A;margin:28px 0 8px}
+.doc p{margin:0 0 14px}
+.doc ul,.doc ol{margin:0 0 14px;padding-left:24px}
+.doc li{margin:4px 0}
+.doc a{color:#1F6E87;font-weight:800}
+.doc a:hover{color:#0A0E1A}
+.doc .sponsor{margin:0 0 10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#1F6E87}
+.doc-callout{background:#FFFFFF;border:1px solid #E2DDD2;border-radius:12px;padding:20px 24px;margin:0 0 16px}
+.doc-callout > :first-child{margin-top:0}
+.doc-callout > :last-child{margin-bottom:0}
+</style>

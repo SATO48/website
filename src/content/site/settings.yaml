@@ -1,0 +1,61 @@
+siteName: SATO48
+defaultDescription: >-
+  The Springfield And The Ozarks 48-Hour Film Challenge & Festival. One weekend,
+  one film of five minutes or less, then the big screen.
+shareImageAlt: 'SATO48: 48 hours. 5 minutes. Make it count.'
+logo: /images/site/logo.svg
+logoAlt: SATO48 2027
+organization:
+  legalName: Springfield And The Ozarks 48-Hour Film Challenge & Festival
+  email: support@sato48.com
+  foundingYear: '2006'
+  city: Springfield
+  region: MO
+nav:
+  links:
+    - label: Film Challenge
+      href: /film-challenge/
+    - label: FiveFest
+      href: /fivefest/
+    - label: Resources
+      href: /resources/
+  button:
+    label: ▶ The Archive
+    href: https://portal.sato48.com/archive
+footer:
+  tagline: Every part of SATO48 serves filmmakers first.
+  columns:
+    - heading: Take part
+      links:
+        - label: Film Challenge
+          href: /film-challenge/
+          newTab: false
+        - label: FiveFest
+          href: /fivefest/
+          newTab: false
+        - label: Team portal
+          href: https://portal.sato48.com/
+          newTab: false
+        - label: Rules & resources
+          href: /resources/
+          newTab: false
+    - heading: Watch
+      links:
+        - label: The Archive
+          href: https://portal.sato48.com/archive
+          newTab: false
+        - label: FiveFest films
+          href: https://portal.sato48.com/archive/fivefest
+          newTab: false
+    - heading: Follow
+      links:
+        - label: Facebook
+          href: https://www.facebook.com/SATOFilmChallenge
+          newTab: true
+        - label: Instagram
+          href: https://www.instagram.com/sato48_filmchallenge/
+          newTab: true
+        - label: YouTube
+          href: https://www.youtube.com/@SATO48FILM
+          newTab: true
+  copyright: © Hlabeard Productions, LLC · Springfield, Missouri

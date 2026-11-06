@@ -2,34 +2,37 @@
 import Layout from "../../layouts/Layout.astro";
 import Nav from "../../components/Nav.astro";
 import Footer from "../../components/Footer.astro";
-import { getCollection } from "astro:content";
-import { url } from "../../lib/paths";
+import { href } from "../../lib/paths";
+import { getCollection, getSingleton, heading } from "../../lib/content";
 
-// Newest first. Edit these in Keystatic (/keystatic in dev) or src/content/inspiration-packages/.
-const packages = (await getCollection("inspirationPackages")).sort((a, b) => Number(b.data.year) - Number(a.data.year));
+// Copy comes from Keystatic: Pages → Resources. Packages are newest first; documents are
+// those marked "Show on the Resources page", in their set order.
+const { seo, header, packages: packagesSection, documents: documentsSection } = await getSingleton("resources");
+const packages = (await getCollection("inspirationPackages")).sort((a, b) => Number(b.year) - Number(a.year));
+const documents = (await getCollection("documents")).filter((d) => d.showOnResources).sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 ---
 
-<Layout title="Rules & Resources · SATO48" description="Every SATO48 Inspiration Package since 2006, plus the full guidelines, terms and award criteria for the Film Challenge and FiveFest.">
+<Layout title={seo.title} description={seo.description}>
 <div style="font-family: Inter, Arial, sans-serif; background: #0A0E1A; color: #FFFFFF; line-height: 1.5; min-width: 0">
 
 <div style="position: sticky; top: 0; z-index: 10">
-<Nav current="resources" />
+<Nav />
 </div>
 
 <header style="padding: 32px 0 56px; border-bottom: 1px solid #1E2638">
 <div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
-<nav aria-label="Breadcrumb" style="font-size: 14px; color: #B9B9C6; margin-bottom: 40px"><a href={url("")} style="color: #B9B9C6; text-decoration: none">Home</a> <span aria-hidden="true" style="margin: 0 6px">/</span> <span aria-current="page" style="color: #E6E6EE">Resources</span></nav>
+<nav aria-label="Breadcrumb" style="font-size: 14px; color: #B9B9C6; margin-bottom: 40px"><a href={href("/")} style="color: #B9B9C6; text-decoration: none">Home</a> <span aria-hidden="true" style="margin: 0 6px">/</span> <span aria-current="page" style="color: #E6E6EE">{header.title}</span></nav>
 <div style="display: flex; flex-wrap: wrap; gap: 40px 56px; align-items: end">
 <div style="flex: 1 1 480px; min-width: 0">
-<p style="margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3996B1">Rules, terms &amp; history</p>
-<h1 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(36px, 4.5vw, 56px)">Resources</h1>
-<p style="font-size: 18px; color: #E3E3EA; margin: 16px 0 0; max-width: 52ch">Every Inspiration Package since 2006, plus the full guidelines, terms and award criteria. The current year's documents are posted here when registration opens.</p>
+<p style="margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3996B1">{header.eyebrow}</p>
+<h1 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(36px, 4.5vw, 56px)">{header.title}</h1>
+<p style="font-size: 18px; color: #E3E3EA; margin: 16px 0 0; max-width: 52ch">{header.intro}</p>
 </div>
 <aside style="flex: 0 1 380px; min-width: 0; background: #141B2D; border: 1px solid #232C40; border-radius: 18px; padding: 24px">
 <p style="margin: 0 0 12px; font-size: 13px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #3996B1">On this page</p>
 <ul style="list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; font-weight: 800">
-<li><a href="#inspiration-packages" style="text-decoration: none">Inspiration Packages, 2006–2026 ↓</a></li>
-<li><a href="#documents" style="text-decoration: none">Guidelines, terms &amp; criteria ↓</a></li>
+<li><a href="#inspiration-packages" style="text-decoration: none">{header.packagesLinkLabel}</a></li>
+<li><a href="#documents" style="text-decoration: none">{header.documentsLinkLabel}</a></li>
 </ul>
 </aside>
 </div>
@@ -39,13 +42,13 @@ const packages = (await getCollection("inspirationPackages")).sort((a, b) => Num
 <section id="inspiration-packages" class="band" style="padding: 88px 0; background: #141B2D">
 <div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
 <div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
-<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">Twenty years of<br>Inspiration Packages.</h2>
-<p style="margin: 0; color: #B9B9C6; max-width: 46ch">The prompt every team got at Kickoff, year by year. Select a package to read it full size.</p>
+<h2 style="margin: 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)" set:html={heading(packagesSection.heading)} />
+<p style="margin: 0; color: #B9B9C6; max-width: 46ch">{packagesSection.intro}</p>
 </div>
 <div class="ip" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 32px 16px">
 
-{packages.map(({ data: p }) => (
-<figure style="margin: 0"><a href={url(p.fullSize)} target="_blank" rel="noopener" style="display: block; text-decoration: none"><img src={url(p.thumbnail)} alt={`SATO48-${p.year} Inspiration Package`} style="display: block; width: 100%; aspect-ratio: 17/22; object-fit: cover; object-position: top; border-radius: 8px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(0,0,0,.35)"><figcaption style="margin-top: 12px"><span style="display: block; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; color: #FF6C00">{p.year}</span><span style="display: block; font-size: 14px; color: #CFCFDA">{p.theme}</span></figcaption></a></figure>
+{packages.map((p) => (
+<figure style="margin: 0"><a href={href(p.fullSize)} target="_blank" rel="noopener" style="display: block; text-decoration: none"><img src={href(p.thumbnail)} alt={`SATO48-${p.year} Inspiration Package`} style="display: block; width: 100%; aspect-ratio: 17/22; object-fit: cover; object-position: top; border-radius: 8px; background: #FFFFFF; box-shadow: 0 10px 24px rgba(0,0,0,.35)"><figcaption style="margin-top: 12px"><span style="display: block; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; color: #FF6C00">{p.year}</span><span style="display: block; font-size: 14px; color: #CFCFDA">{p.theme}</span></figcaption></a></figure>
 ))}
 
 </div>
@@ -56,16 +59,15 @@ const packages = (await getCollection("inspirationPackages")).sort((a, b) => Num
 <div style="max-width: 1160px; margin: 0 auto; padding: 0 24px">
 <div style="display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px 24px; margin-bottom: 40px">
 <div>
-<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">2026 documents</span>
-<h2 style="margin: 12px 0 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)">The fine print, in full.</h2>
+<span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">{documentsSection.eyebrow}</span>
+<h2 style="margin: 12px 0 0; font-family: 'Archivo Black', 'Arial Black', sans-serif; font-weight: 400; line-height: 1.05; letter-spacing: -.01em; font-size: clamp(32px, 4vw, 48px)" set:html={heading(documentsSection.heading)} />
 </div>
-<p style="margin: 0; color: #2B2B33; max-width: 46ch">The complete documents as published for SATO48-2026. The 2027 versions replace them when registration opens.</p>
+<p style="margin: 0; color: #2B2B33; max-width: 46ch">{documentsSection.intro}</p>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
-<a href={url("resources/challenge-guidelines-2026/")} style="display: flex; flex-direction: column; gap: 8px; background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px; text-decoration: none; color: #0A0E1A"><span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">Film Challenge</span><span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; line-height: 1.1">Challenge Guidelines</span><span style="color: #2B2B33">Registration, teams, the film, technical requirements and eligibility.</span><span style="margin-top: auto; padding-top: 8px; font-weight: 800; color: #1F6E87">Read →</span></a>
-<a href={url("resources/challenge-terms-2026/")} style="display: flex; flex-direction: column; gap: 8px; background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px; text-decoration: none; color: #0A0E1A"><span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">Film Challenge</span><span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; line-height: 1.1">Terms &amp; Agreement</span><span style="color: #2B2B33">The participation agreement every team accepts, including music releases and rights.</span><span style="margin-top: auto; padding-top: 8px; font-weight: 800; color: #1F6E87">Read →</span></a>
-<a href={url("resources/awards-prizes-2026/")} style="display: flex; flex-direction: column; gap: 8px; background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px; text-decoration: none; color: #0A0E1A"><span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">Film Challenge</span><span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; line-height: 1.1">Awards &amp; Prizes</span><span style="color: #2B2B33">Award criteria and every sponsored prize with its rules.</span><span style="margin-top: auto; padding-top: 8px; font-weight: 800; color: #1F6E87">Read →</span></a>
-<a href={url("resources/fivefest-guidelines-2026/")} style="display: flex; flex-direction: column; gap: 8px; background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px; text-decoration: none; color: #0A0E1A"><span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">FiveFest</span><span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; line-height: 1.1">FiveFest Guidelines</span><span style="color: #2B2B33">Submission rules, judging, programming, legal terms and the criteria for each genre.</span><span style="margin-top: auto; padding-top: 8px; font-weight: 800; color: #1F6E87">Read →</span></a>
+{documents.map((d) => (
+<a href={href(`/resources/${d.slug}/`)} style="display: flex; flex-direction: column; gap: 8px; background: #FFFFFF; border: 1px solid #EEEEEE; border-radius: 18px; padding: 28px; text-decoration: none; color: #0A0E1A"><span style="font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: #1F6E87">{d.program}</span><span style="font-family: 'Archivo Black', 'Arial Black', sans-serif; font-size: 22px; line-height: 1.1">{d.title}</span><span style="color: #2B2B33">{d.summary}</span><span style="margin-top: auto; padding-top: 8px; font-weight: 800; color: #1F6E87">Read →</span></a>
+))}
 </div>
 </div>
 </section>

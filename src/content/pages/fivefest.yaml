@@ -1,0 +1,169 @@
+seo:
+  title: 'FiveFest: Five Minute Film Festival · SATO48'
+  description: >-
+    Films of five minutes or less, in any of eight genres, from filmmakers
+    anywhere. Every film is scored by our Academy Judges and screens online; the
+    best play the big screen in Springfield.
+header:
+  logo: /images/fivefest/header/logo.png
+  title: FiveFest
+  intro: >-
+    The Five Minute Film Festival: films of five minutes or less, in any of eight
+    genres, from filmmakers anywhere. Every film gets in, gets scored by our
+    Academy Judges and screens online. The best play the big screen in
+    Springfield.
+status:
+  label: 2026 submissions are closed
+  dates:
+    - label: 2027 submissions open
+      value: '[ANNOUNCE DATE]'
+    - label: Awards Ceremony
+      value: Second week of October
+  button:
+    label: ▶ Watch FiveFest films
+    href: https://portal.sato48.com/archive/fivefest
+  guidelinesLabel: Guidelines ↓
+photo:
+  image: /images/fivefest/photo/image.jpg
+  alt: The Gillioz Theatre marquee in Springfield reading FiveFest, SATO48, Oct. 24, 6 PM
+  caption: FiveFest on the Gillioz marquee, Springfield, Missouri.
+stats:
+  - value: '5:00'
+    label: Maximum length, credits included.
+    accent: orange
+  - value: '8'
+    label: Genres, each with its own Best award.
+    accent: blue
+  - value: 720p
+    label: Minimum resolution, with clear audio.
+    accent: white
+  - value: 100%
+    label: Of complete, eligible films are accepted.
+    accent: white
+guidelines:
+  eyebrow: 2026 guidelines
+  heading: What to send us.
+  intro: >-
+    FiveFest is presented by Hlabeard Productions with the SATO48 Film Challenge.
+    Film Challenge teams get a free FiveFest submission with registration.
+  cards:
+    - title: Your film
+      points:
+        - Five minutes or less, credits included. Longer files can't be uploaded.
+        - Complete and ready for theater projection. No works in progress.
+        - Non-English dialogue needs English subtitles or an English dub.
+    - title: Technical
+      points:
+        - 720p minimum resolution.
+        - Clear audio.
+        - A poster and other promotional materials are encouraged, not required.
+    - title: Who can enter
+      points:
+        - Any filmmaker, any age, anywhere.
+        - No limit on when the film was made.
+        - Submit through FilmFreeway.
+genres:
+  heading: Eight genres. Eight awards.
+  intro: >-
+    Industry professionals and filmmaking community members judge every entry.
+    Last year's registered Film Challenge team members can join as Academy
+    Judges.
+  items:
+    - name: Animation
+      criteria:
+        - Innovative animation techniques
+        - Storytelling and emotional impact
+        - Artistic merit and design
+        - Voice performances
+    - name: Comedy
+      criteria:
+        - Original, well-written script
+        - Comedic timing and delivery
+        - Ensemble chemistry
+        - Direction that lands the humor
+    - name: Documentary
+      criteria:
+        - Depth of subject and research
+        - Narrative structure and pacing
+        - Cinematography and visual cohesion
+        - Impact, originality and insight
+    - name: Drama
+      criteria:
+        - Complex characters and story
+        - Quality of performances
+        - Direction and pacing
+        - Cinematic craft
+    - name: Experimental
+      criteria:
+        - Innovation in technique
+        - Narrative and conceptual ambiguity
+        - Visual and aural design
+        - Engagement and provocation
+    - name: Horror
+      criteria:
+        - Fear, suspense and thrill
+        - Original concept and execution
+        - Technical craft of atmosphere
+        - Depth of story
+    - name: Music Video
+      criteria:
+        - Creative, original visuals
+        - Music and image working together
+        - Direction and choreography
+        - Technical quality
+    - name: Musical
+      criteria:
+        - Music woven into the story
+        - Quality of the numbers
+        - Choreography and staging
+        - Direction of musical sequences
+  link:
+    label: Full judging criteria by genre →
+    href: /resources/fivefest-guidelines-2026/
+tiers:
+  heading: Every film gets seen.
+  items:
+    - eyebrow: Accepted · every film
+      title: Scorecard + online screening
+      body: >-
+        A FiveFest Scorecard showing how the Academy Judges responded, plus an
+        exclusive month-long online screening.
+      featured: false
+    - eyebrow: Selected
+      title: Big screen + nomination
+      body: >-
+        An in-theater screening at a festival location, and recognition as a
+        Nominee at the October FiveFest Awards Ceremony.
+      featured: false
+    - eyebrow: Genre winner
+      title: Statuette + the stage
+      body: >-
+        With a representative checked in at the ceremony: a statuette, an on-stage
+        acceptance speech and a backstage interview.
+      featured: true
+  note: Filmmakers are told their film's acceptance level by email.
+dates:
+  heading: 2026 dates & venue.
+  items:
+    - label: Submissions close
+      value: September 1, 2026
+    - label: Awards Ceremony
+      value: Second week of October
+    - label: In-theater screenings
+      value: Scheduled around venue capacity
+    - label: Venue
+      value: >-
+        Alamo Drafthouse Cinema, Springfield, Missouri, the largest Alamo
+        Drafthouse in the United States. Wheelchair accessible.
+finePrint:
+  heading: The fine print.
+  body: |
+    - **Rights.** You must own all rights to your film. You grant Hlabeard Productions and SATO48 in-theater and paywalled online screening rights for the festival, plus free online use in Festival Manager and promotional use in perpetuity.
+    - **Endorsement.** Acceptance isn't an endorsement of a film's content.
+    - **Liability.** Hlabeard Productions and SATO48 aren't liable for losses or damages, including from unavoidable cancellations or delays; we'll try to reschedule.
+    - **Inclusion.** FiveFest is committed to diversity and inclusion.
+  contact: |
+    Questions? [support@sato48.com](mailto:support@sato48.com) or the [Helpdesk](https://help.sato48.com/en/).
+  link:
+    label: Full 2026 FiveFest guidelines →
+    href: /resources/fivefest-guidelines-2026/

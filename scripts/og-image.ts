@@ -4,8 +4,8 @@
 import sharp from "sharp";
 
 const W = 1200, H = 630;
-const hero = "public/images/ef3bd7078a8dc0596ebf136bf8f4d0f0.jpg";
-const logo = "public/images/3895383ea4894dab2ac8a8e35b39d7d0.svg";
+const hero = "public/images/home/hero/background.jpg";
+const logo = "public/images/site/logo.svg";
 
 const shade = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}">
 <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="0">

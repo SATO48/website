@@ -1,0 +1,224 @@
+seo:
+  title: The Film Challenge · SATO48
+  description: >-
+    One weekend, one film. Teams get their Inspiration Package at Kickoff, then
+    have 48 hours to write, shoot and edit an original film of five minutes or
+    less.
+header:
+  eyebrow: 48-hour filmmaking · since 2006
+  title: The Film Challenge
+  breadcrumb: Film Challenge
+  intro: >-
+    One weekend, one film. Teams get their Inspiration Package at Kickoff, then
+    have 48 hours to write, shoot and edit an original film of five minutes or
+    less. Every film that meets the rules screens at the festival.
+event:
+  label: SATO48-2027
+  dates:
+    - label: Registration opens
+      value: January
+    - label: Kickoff
+      value: Friday, April 23
+    - label: Awards Ceremony
+      value: Saturday, June 5
+  button:
+    label: ▶ Watch the 2026 films
+    href: https://portal.sato48.com/archive/2026
+  guidelinesLabel: Guidelines ↓
+steps:
+  heading: How the weekend works.
+  intro: 'Open to everyone: first-timers, hobbyists and working professionals.'
+  items:
+    - accent: blue
+      title: Register a team.
+      body: >-
+        Sign up in Festival Manager. Before Kickoff you can build your crew, scout
+        locations, line up music and gear, and plan food and rides. No shooting
+        yet.
+    - accent: blue
+      title: Kickoff.
+      body: >-
+        Every team gets the Inspiration Package at the same moment. At least one
+        team member has to be there, or join virtually if you live 50 miles or more
+        away.
+    - accent: orange
+      title: 48 hours.
+      body: >-
+        Write, shoot and edit a film of five minutes or less, and make its poster.
+        Turn both in through Festival Manager before the clock runs out.
+    - accent: orange
+      title: Screen it. Win it.
+      body: >-
+        Films play the Festival Screening, where filmmakers and audiences vote. An
+        international jury weighs in, and it all comes together at the Recognition
+        & Awards Ceremony.
+ceremony:
+  photo: /images/film-challenge/ceremony/photo.jpg
+  photoAlt: >-
+    Red carpet, velvet ropes and SATO48 sponsor backdrops set up in a historic
+    theater lobby for the awards
+  eyebrow: Recognition & Awards Ceremony
+  heading: It ends on the red carpet.
+  body: >-
+    Audience and filmmaker votes and the international jury's picks all come
+    together at a red-carpet night. It's open to everyone, from seasoned
+    filmmakers to people who just love movies.
+  date: 'SATO48-2027: Saturday, June 5'
+inspiration:
+  eyebrow: The Inspiration Package
+  heading: |-
+    Same prompt.
+    Every team.
+    Same second.
+  body: >-
+    The Inspiration Package is revealed at Kickoff and is the heart of the
+    Challenge. Every element in it has to be in your film. A film missing any
+    element is not screened, no matter when it was turned in.
+  link:
+    label: See past Inspiration Packages →
+    href: /resources/
+  packageLabel: SATO48-2026 Inspiration Package
+  packageTitle: Invent a Conflict Worth the Fight
+  elements: |
+    1. The central conflict is between your Leading Character and Supporting Character over an **invented topic**, not drawn from any existing hot-button issue, debate or controversy.
+    2. That conflict is shown for **at least one consecutive minute through physical action only**, with no words of any kind, spoken, written or otherwise.
+    3. An **invented artifact** closely tied to the conflict appears in at least one close-up.
+    4. One character **decisively prevails** when the other changes their belief, decision, behavior or course of action. Even teams: the Leading Character prevails. Odd teams: the Supporting Character prevails.
+  prohibition: |
+    **Prohibition:** prevailing is not allowed through injury, threat of injury, death, or the use or brandishing of any weapon.
+guidelines:
+  eyebrow: 2026 guidelines
+  heading: The rules of the weekend.
+  intro: >-
+    A summary of the SATO48-2026 guidelines. The 2027 guidelines are published
+    when registration opens. The full text is the final word.
+  cards:
+    - title: Registration
+      points:
+        - $35 per team, non-refundable, paid by card in Festival Manager.
+        - Includes a free submission to FiveFest.
+    - title: Your team
+      points:
+        - 'Open to everyone. Everyone volunteers: no paid participation.'
+        - Anyone who contributes in any way counts as a team member.
+        - At least one member at Kickoff; virtual if the team owner lives 50+ miles (80 km) away.
+        - Parental or guardian consent for anyone under 18.
+        - Follow all local, state and national safety guidelines.
+    - title: Your film
+      points:
+        - Uses every Inspiration Package element.
+        - At least two principal characters (voiceovers and dual roles are fine).
+        - Made entirely within the 48 hours.
+        - References "SATO48-2026" wherever it screens.
+    - title: Technical requirements
+      points:
+        - Five minutes or less (00:05:00:00).
+        - 'Opening Event Credit: team name, the event date, film title.'
+        - 'Closing Event Credit: the video clip SATO48 provides to the team owner.'
+        - Any cameras and sound gear. Computer-generated material only if made during the 48 hours.
+    - title: Not allowed
+      points:
+        - Shooting or creating footage before Kickoff.
+        - Stock footage or any pre-existing material.
+        - 'Copyrighted material without permission: logos, music, signage, brand names.'
+        - Posting the film online before July 1. A trailer goes to Festival Manager first.
+    - title: Music & performance awards
+      points:
+        - Log all music under Music Releases in Festival Manager.
+        - Original music needs a Rights Request and a Musician's Agreement, both uploaded.
+        - Royalty-free music is allowed but can't win Score or Song.
+        - Lead and Supporting Performance awards are for human actors in their own original performances.
+    - title: Poster & trailer
+      points:
+        - A poster is required, turned in within the 48 hours.
+        - JPEG or PNG, 1920×1080, with the film title and team name.
+        - 'Optional trailer: one minute or less, uploaded to Festival Manager before it''s shared.'
+    - title: Late films & disqualification
+      points:
+        - 'No grace period: late films can''t win awards or prizes.'
+        - Late films that meet the Inspiration Package and technical rules still screen.
+        - Missing Inspiration Package elements, or breaking technical or safety rules, can disqualify a film.
+    - title: Screenings & broadcast
+      points:
+        - Every film that meets the Inspiration Package and technical rules screens at the festival, on time or late.
+        - Those films are also considered for SATO48 The TV Show.
+  links:
+    - label: Full 2026 guidelines →
+      href: /resources/challenge-guidelines-2026/
+    - label: Terms & Agreement →
+      href: /resources/challenge-terms-2026/
+    - label: Helpdesk →
+      href: https://help.sato48.com/en/
+awards:
+  heading: What the jury looks for.
+  intro: >-
+    Films turned in on time compete for these awards. Audience Favorite is voted
+    by filmmakers and audiences; the rest by the international jury.
+  items:
+    - name: Best Film
+      description: 'Best interpretation of the Inspiration Package: inventive use and integration of its elements.'
+      color: orange
+    - name: Audience Favorite
+      description: Chosen by audiences and filmmakers at the festival and online.
+      color: blue
+    - name: Cinematography
+      description: Effective use of light and shadow in telling the story.
+      color: white
+    - name: Direction
+      description: Actors, camera placement and movement, and composition on screen.
+      color: white
+    - name: Editing
+      description: Transitions, tempo, mood changes and continuity.
+      color: white
+    - name: Lead & Supporting Performance
+      description: Emotional effectiveness and believability in the role.
+      color: white
+    - name: Poster
+      description: Clear, legible from afar, includes the event logo, and leaves a lasting impression.
+      color: white
+    - name: Production Design / Art Direction
+      description: 'The overall look: color, texture, props, set pieces and locations.'
+      color: white
+    - name: Screenplay
+      description: Structure, plot, character development, dialogue and ending.
+      color: white
+    - name: Score or Song
+      description: Original music by an identifiable creator that serves the film.
+      color: white
+    - name: Sound
+      description: "Everything heard that isn't music: dialogue, background and effects."
+      color: white
+  link:
+    label: Full award and prize criteria →
+    href: /resources/awards-prizes-2026/
+prizes:
+  heading: 2026 sponsored prizes.
+  intro: Prizes change every year. Teams opt in to the ones they're going for.
+  items:
+    - name: You Gotta See It
+      sponsor: Alamo Drafthouse Cinema
+      description: For the quirky, offbeat and surprising. $300 in Alamo passes.
+    - name: Best Opening / Closing Credits
+      sponsor: Missouri Film Office
+      description: Exceptional storytelling with motion graphics in the opening or closing credits.
+    - name: Golden Weaver
+      sponsor: Graceway Baptist Church
+      description: A character's moral dilemma, resolved without violence and inspired by Jesus' New Testament teachings.
+    - name: Family Film Project
+      sponsor: James Bacon
+      description: Films directed and acted by a parent or grandparent together with their kids.
+    - name: Al LaBrie Outstanding Set Design
+      sponsor: LaBrie Family
+      description: For teams that build a set piece for their film.
+    - name: Dapper Timeless Style (Hair Design)
+      sponsor: Dapper Barber
+      description: Hair styling that builds character, era and atmosphere with intention.
+    - name: Best Nerd Out Film
+      sponsor: Fanatics and the Fan
+      description: 'Celebrates nerd culture: games, sci-fi, horror, fantasy, anime, comics, martial arts, westerns.'
+    - name: Most Creative Product Placement
+      sponsor: Springfield Creatives
+      description: A made-up product, service or company, shown or named on screen. No real brands.
+  link:
+    label: Full award and prize criteria →
+    href: /resources/awards-prizes-2026/

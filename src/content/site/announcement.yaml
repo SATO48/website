@@ -1,0 +1,5 @@
+show: false
+text: '🎟️ FiveFest is coming: [DATE] at [VENUE]'
+button:
+  label: Buy tickets →
+  href: https://buytickets.at/sato48/2462108

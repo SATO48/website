@@ -31,8 +31,14 @@ Consult these guides before working on related tasks:
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
 
-## Design canvas
+## Content
 
-Site content comes from a Claude Design canvas; `design/` is its last-synced copy. Use the
-`sync-design` skill to port canvas changes, and never edit `design/` by hand. Code-only changes
-(SEO, scripts, layout plumbing) go straight into `src/`.
+Site copy, links and images are edited in Keystatic (`/keystatic`) and stored in `src/content/`
+(YAML and Markdoc) and `public/images/`. The schema lives in `keystatic.config.ts` and
+`src/keystatic/`; pages read it through `src/lib/content.ts`. When a page needs new editable
+content, add the field to the schema and its value to the content file in the same change, and
+keep styling in code. Use the `edit-website-content` skill for content-only edits.
+
+Keystatic renames an image to match its field's path when an entry is saved
+(`public/images/home/archive/posters/0/image.jpg`), so name new images that way and keep one image
+folder per singleton.

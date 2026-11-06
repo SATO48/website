@@ -4,7 +4,6 @@ import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
 import react from '@astrojs/react';
-import markdoc from '@astrojs/markdoc';
 import keystatic from '@keystatic/astro';
 import cloudflare from '@astrojs/cloudflare';
 
@@ -25,7 +24,9 @@ export default defineConfig({
   // (/keystatic) and API (/api/keystatic) run on the Worker.
   // The site has no image optimization or sessions, so skip the Cloudflare Images and
   // KV bindings the adapter would otherwise auto-provision on deploy.
-  adapter: isDev ? undefined : cloudflare({ imageService: 'passthrough' }),
+  // Prerender in Node rather than workerd, so pages can read Keystatic content from disk
+  // (src/lib/content.ts).
+  adapter: isDev ? undefined : cloudflare({ imageService: 'passthrough', prerenderEnvironment: 'node' }),
   session: false,
-  integrations: [sitemap(), react(), markdoc(), keystatic()],
+  integrations: [sitemap(), react(), keystatic()],
 });

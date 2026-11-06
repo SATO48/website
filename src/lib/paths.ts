@@ -5,5 +5,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 /** Link to a page on this site, e.g. url("film-challenge/"). */
 export const url = (path = "") => base + path.replace(/^\//, "");
 
-/** Path to a file in public/images. */
-export const img = (file: string) => `${base}images/${file}`;
+/**
+ * Resolve a link entered in Keystatic: site paths ("/fivefest/") and public files
+ * ("/images/…") get the base URL; full URLs, mailto: and #anchors pass through.
+ */
+export const href = (link: string) => (link.startsWith("/") ? url(link) : link);

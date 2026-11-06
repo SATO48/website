@@ -8,6 +8,7 @@ Site for [next.sato48.com](https://next.sato48.com), built with [Astro](https://
 bun install
 bun run dev      # http://localhost:4321
 bun run build    # dist/client (static assets) + dist/server (Worker); runs on Node
+bun run check    # type-check pages against the content schema
 bun run preview  # serves the build in workerd
 ```
 
@@ -16,24 +17,30 @@ bun run preview  # serves the build in workerd
 - `src/pages/` – one file per page (`/`, `/film-challenge/`, `/fivefest/`, `/resources/…`)
 - `src/layouts/Layout.astro` – `<head>`, fonts, global styles
 - `src/components/` – shared `Nav` and `Footer`
-- `src/lib/paths.ts` – `url()` and `img()` helpers for internal links and images
-- `public/images/` – images
+- `src/lib/paths.ts` – `url()` and `href()` helpers for internal links and images
+- `src/lib/content.ts` – reads Keystatic content for the pages
+- `keystatic.config.ts`, `src/keystatic/` – the content schema (what's editable at `/keystatic`)
+- `src/content/` – the content: site settings, one file per page, rules documents, Inspiration Packages
+- `public/images/` – images (Keystatic-managed ones are named after their field)
 - `public/CNAME` – custom domain for GitHub Pages
-- `design/` – copy of the Claude Design canvas as of the last sync (don't edit by hand)
-- `scripts/design-sync.ts` – helpers for syncing canvas changes into `src/`
 
 ## Content edits
 
-Copy, images and links are edited in the [design canvas](https://claude.ai/artifact/6YnLaQmwxYnToa4fFqmKtM)
-and synced here as pull requests by the `sync-design` skill. See [docs/multica](docs/multica/README.md)
-for the Multica workflow.
+Everything a visitor reads is edited in [Keystatic](https://keystatic.com) at `/keystatic`:
 
-The home page's announcement bar is toggled by `showAnnouncement` at the top of `src/pages/index.astro`.
+- **Pages**: Home, Film Challenge, FiveFest, Resources and the 404 page, section by section
+  (headings, text, buttons, dates, cards, images, SEO title and description).
+- **Rules & history**: the full rules documents (each its own page at `/resources/<slug>/`, listed
+  on Resources) and the Inspiration Packages archive.
+- **Site**: the home page announcement bar, plus menu, footer, logo and organization details.
 
-## Keystatic
+In `bun run dev` Keystatic writes straight to the files in this repo; in production it commits to
+`SATO48/website` on GitHub, which triggers a redeploy. If `.env` sets
+`PUBLIC_KEYSTATIC_STORAGE=github`, use the `website-local-keystatic` launch config (port 4322) to
+edit local files instead. See [docs/multica](docs/multica/README.md) for requesting edits through
+Multica.
 
-Edit content at `/keystatic`. In `bun run dev` it writes straight to the files in this repo;
-in production it commits to `SATO48/website` on GitHub, which triggers a redeploy.
+## Keystatic setup
 
 Production needs a Keystatic GitHub App. Create it once by running dev with
 `PUBLIC_KEYSTATIC_STORAGE=github` in `.env` and following the prompts at `/keystatic`, then set

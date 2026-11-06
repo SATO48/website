@@ -1,0 +1,124 @@
+seo:
+  title: SATO48 · Springfield & the Ozarks 48-Hour Film Challenge & Festival
+  description: >-
+    The Springfield And The Ozarks 48-Hour Film Challenge & Festival. One
+    weekend, one film of five minutes or less, then the big screen.
+hero:
+  eyebrow: Springfield & the Ozarks · 22 years
+  headline: |-
+    48 hours.
+    5 minutes.
+    *Make it count.*
+  intro: >-
+    The Springfield And The Ozarks 48-Hour Film Challenge & Festival. Teams get
+    one weekend to make a film of five minutes or less, then we put it on the
+    big screen.
+  primaryButton:
+    label: ▶ EXPLORE THE ARCHIVE
+    href: https://portal.sato48.com/archive
+  secondaryButton:
+    label: Watch the 2026 awards
+    href: https://portal.sato48.com/archive/2026/events/awards-oct
+  background: /images/home/hero/background.jpg
+  logo: /images/home/hero/logo.svg
+  logoAlt: SATO48 2027 logo
+programs:
+  heading: Three ways in.
+  intro: >-
+    Make a film in a weekend, bring your five-minute short from anywhere in the
+    world, or grow a script with us.
+  cards:
+    - accent: blue
+      eyebrow: The Film Challenge
+      title: 48 hours. Go.
+      body: >-
+        At Kickoff every team gets the Inspiration Package at the same moment.
+        Then you have 48 hours to write, shoot and edit a film of five minutes
+        or less.
+      links:
+        - label: Challenge guidelines →
+          href: /film-challenge/
+          highlight: false
+    - accent: white
+      logo: /images/home/programs/cards/1/logo.png
+      logoAlt: 'FiveFest: Five Minute Film Festival'
+      title: Five minutes, worldwide.
+      body: >-
+        A festival of five-minute films open to filmmakers everywhere. Big
+        ideas, short runtime, one packed screening.
+      links:
+        - label: Watch FiveFest films →
+          href: https://portal.sato48.com/archive/fivefest
+          highlight: true
+        - label: FiveFest guidelines →
+          href: /fivefest/
+          highlight: false
+    - accent: orange
+      eyebrow: Prime for Development
+      title: Grow your script.
+      body: >-
+        Our script development program helps writers take a story from idea to
+        something ready to shoot.
+      links: []
+archive:
+  headline: |-
+    1,355 films.
+    *One archive.*
+  body: >-
+    Every team, every film and every winner, going back to 2006. All made in 48
+    hours. Find your favorites, revisit past winners, and see what Ozarks
+    filmmakers have been up to.
+  button:
+    label: ▶ Browse The Archive
+    href: https://portal.sato48.com/archive
+  years:
+    - '2026'
+    - '2025'
+    - '2024'
+    - '2023'
+    - …
+    - '2006'
+  postersLink: https://portal.sato48.com/archive
+  posters:
+    - image: /images/home/archive/posters/0/image.jpg
+      alt: In Their Own Way poster (2026 Best Film)
+    - image: /images/home/archive/posters/1/image.jpg
+      alt: Say Cheese, Bingles! poster (2026 Audience Favorite)
+    - image: /images/home/archive/posters/2/image.jpg
+      alt: Kitchen Heat poster (2026 Best Film)
+    - image: /images/home/archive/posters/3/image.jpg
+      alt: Annie Sullivan's Methodically Misaligned Day poster (2026 Poster Design)
+    - image: /images/home/archive/posters/4/image.jpg
+      alt: The Sacred Sip poster (2026 Direction)
+    - image: /images/home/archive/posters/5/image.jpg
+      alt: Big Brother, little brother poster (2026 Editing, Lead Performance)
+    - image: /images/home/archive/posters/6/image.jpg
+      alt: Slaydoh 69 poster (2026 Direction)
+    - image: /images/home/archive/posters/7/image.jpg
+      alt: TV Guide poster (2026 Direction and Editing runner-up)
+yearRound:
+  headline: SATO48 films, *year-round*, on the big screen.
+  body: >-
+    Now playing before every screening at College Station Theaters, with new
+    segments every month celebrating Ozarks filmmakers all year long.
+  logo: /images/home/yearRound/logo.png
+  logoAlt: 'College Station Theaters: Cinema. Reimagined.'
+partners:
+  heading: Made possible by our partners
+  intro: Resident company of the Gillioz Center for Arts & Entertainment.
+  logos:
+    - image: /images/home/partners/logos/0/image.png
+      alt: Gillioz Center for Arts & Entertainment
+      invert: true
+    - image: /images/home/partners/logos/1/image.png
+      alt: Missouri Film Office
+      invert: false
+    - image: /images/home/partners/logos/2/image.png
+      alt: Film Festival Alliance member
+      invert: false
+    - image: /images/home/partners/logos/3/image.png
+      alt: SW Missouri Film Office
+      invert: false
+    - image: /images/home/partners/logos/4/image.png
+      alt: The Ozarks Film Foundry
+      invert: false

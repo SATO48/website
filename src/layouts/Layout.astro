@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-import { url, img } from "../lib/paths";
+import { url, href } from "../lib/paths";
+import { getSettings } from "../lib/content";
 
 interface Props {
   title: string;
@@ -10,14 +11,15 @@ interface Props {
   imageAlt?: string;
 }
 
+const settings = await getSettings();
 const {
   title,
-  description = "The Springfield And The Ozarks 48-Hour Film Challenge & Festival. One weekend, one film of five minutes or less, then the big screen.",
+  description = settings.defaultDescription,
   image = "og.jpg",
-  imageAlt = "SATO48: 48 hours. 5 minutes. Make it count.",
+  imageAlt = settings.shareImageAlt,
 } = Astro.props;
 
-const siteName = "SATO48";
+const siteName = settings.siteName;
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const imageUrl = new URL(url(image), Astro.site);
 ---
@@ -51,7 +53,7 @@ const imageUrl = new URL(url(image), Astro.site);
 <meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:image:alt" content={imageAlt} />
 
-<link rel="icon" type="image/svg+xml" href={img("3895383ea4894dab2ac8a8e35b39d7d0.svg")} />
+<link rel="icon" href={href(settings.logo)} />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
