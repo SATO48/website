@@ -22,12 +22,17 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version-file: package.json
+      # The build runs on Node: Bun can't run Astro's Cloudflare build.
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
       - uses: actions/configure-pages@v5
       - run: bun install --frozen-lockfile
       - run: bun run build
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          # Pages can only serve the static part of the build; Keystatic needs the Worker.
+          path: dist/client
 
   deploy:
     needs: build

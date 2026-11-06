@@ -1,13 +1,19 @@
-// Static site: deploy uploads the Astro build output as Workers static assets.
-// Keeping this file present stops `wrangler deploy` from auto-configuring the
-// Astro Cloudflare (SSR) adapter during Workers Builds.
+// Astro builds prerendered pages into dist/client (served as static assets) and a
+// Worker for the on-demand routes (Keystatic's /keystatic and /api/keystatic).
+// @astrojs/cloudflare fills in `main` and the assets directory at build time.
 {
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "website",
   "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
   "assets": {
-    "directory": "./dist",
-    "not_found_handling": "404-page"
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    // With not_found_handling set, browser navigations that match no asset get the 404
+    // page without reaching the Worker. Send Keystatic's routes to the Worker first.
+    "run_worker_first": ["/keystatic", "/keystatic/*", "/api/keystatic/*"]
   },
+  "observability": { "enabled": true },
   // Required by `wrangler preview`, which Workers Builds runs for non-production branches.
   "previews": {}
 }

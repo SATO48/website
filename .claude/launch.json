@@ -4,8 +4,24 @@
     {
       "name": "website",
       "runtimeExecutable": "bun",
-      "runtimeArgs": ["run", "dev", "--port", "4321"],
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--port",
+        "4321"
+      ],
       "port": 4321
+    },
+    {
+      "name": "website-worker",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "wrangler",
+        "dev",
+        "--port",
+        "8788"
+      ],
+      "port": 8788
     }
   ]
 }
