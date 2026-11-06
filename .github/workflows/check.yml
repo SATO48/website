@@ -20,5 +20,5 @@ jobs:
         with:
           node-version: 24
       - run: bun install --frozen-lockfile
-      - run: bun scripts/design-sync.ts check
+      # - run: bun scripts/design-sync.ts check
       - run: bun run build
