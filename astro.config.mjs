@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 // Served from the custom domain in public/CNAME.
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://next.sato48.com',
+  site: 'https://www.sato48.com',
   trailingSlash: 'always',
   integrations: [sitemap()],
 });
